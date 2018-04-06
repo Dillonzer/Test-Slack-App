@@ -19,13 +19,14 @@ namespace Test_App
         /// <param name="username">User you want the bot to show up as</param>
         /// <param name="message">The actual message</param>
         /// <param name="slackAttachments">Slack attachments</param>
-        public void SendSlackMessage(string uri, string username, string message, List<SlackAttachment> slackAttachments = null)
+        public void SendSlackMessage(string uri, string username, string message, Uri IconURL = null, List<SlackAttachment> slackAttachments = null)
         {
             SlackClient slackClient = new SlackClient(uri);
             SlackMessage slackMessage = new SlackMessage
             {
                 Username = username,
-                Text = message
+                Text = message,
+                IconUrl = IconURL
             };
             
             if (slackAttachments != null)
