@@ -14,7 +14,6 @@ namespace Test_App
     public partial class MainForm : Form
     {
         const string WEBHOOK = "https://hooks.slack.com/services/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";
-        const string ICONURI = "https://upload.wikimedia.org/wikipedia/fr/5/5b/Dallas_Stars_logo_secondaire.png";
         Slack client = new Slack();
         List<SlackAttachment> slackAttachments = new List<SlackAttachment> { null };
         List<SlackField> slackFields = new List<SlackField> { null };
@@ -29,9 +28,16 @@ namespace Test_App
             //needed params
             string username = tbox_SlackMessageUsername.Text;
             string message = tbox_SlackMessageValue.Text;
-            Uri icon = new Uri(ICONURI);
-
-            client.SendSlackMessage(WEBHOOK, username, message, icon, slackAttachments);
+            string icontext = tbox_SlackMessageIcon.Text;
+            if (icontext != "")
+            {
+                Uri icon = new Uri(icontext);
+                client.SendSlackMessage(WEBHOOK, username, message, icon, slackAttachments);
+            }
+            else
+            {
+                client.SendSlackMessage(WEBHOOK, username, message, null, slackAttachments);
+            }
 
             //clear these so the next message is fresh
             slackAttachments.Clear();

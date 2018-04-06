@@ -42,31 +42,33 @@
             this.tbox_SlackMessageUsername = new System.Windows.Forms.TextBox();
             this.lbl_SlackMessageUsername = new System.Windows.Forms.Label();
             this.gbox_SlackAttachment = new System.Windows.Forms.GroupBox();
+            this.gbox_OptionalParams = new System.Windows.Forms.GroupBox();
+            this.lbl_SlackAttachmentPreText = new System.Windows.Forms.Label();
+            this.tbox_SlackAttachmentThumbURL = new System.Windows.Forms.TextBox();
+            this.tbox_SlackAttachmentPretext = new System.Windows.Forms.TextBox();
+            this.lbl_SlackAttachmentThumbURL = new System.Windows.Forms.Label();
+            this.lbl_SlackAttachmentTitleLink = new System.Windows.Forms.Label();
+            this.tbox_SlackAttachmentImageURL = new System.Windows.Forms.TextBox();
+            this.tbox_SlackAttachmentTitleLink = new System.Windows.Forms.TextBox();
+            this.lbl_SlackAttachmentImageURL = new System.Windows.Forms.Label();
+            this.lbl_SlackAttachmentAuthorName = new System.Windows.Forms.Label();
+            this.tbox_SlackAttachmentAuthorLink = new System.Windows.Forms.TextBox();
+            this.tbox_SlackAttachmentAuthorName = new System.Windows.Forms.TextBox();
+            this.lbl_SlackAttachmentAuthorLink = new System.Windows.Forms.Label();
+            this.lbl_SlackAttachmentAuthorIcon = new System.Windows.Forms.Label();
+            this.tbox_SlackAttachmentAuthorIcon = new System.Windows.Forms.TextBox();
+            this.lbl_SlackMessageFieldTip = new System.Windows.Forms.Label();
             this.tbox_SlackAttachmentTitle = new System.Windows.Forms.TextBox();
             this.lbl_SlackAttachmentTitle = new System.Windows.Forms.Label();
             this.btn_SlackAttachmentAdd = new System.Windows.Forms.Button();
             this.tbox_SlackAttachmentFallback = new System.Windows.Forms.TextBox();
-            this.tbox_SlackAttachmentPretext = new System.Windows.Forms.TextBox();
             this.tbox_SlackAttachmentColor = new System.Windows.Forms.TextBox();
             this.tbox_SlackAttachmentText = new System.Windows.Forms.TextBox();
-            this.lbl_SlackAttachmentPreText = new System.Windows.Forms.Label();
             this.lbl_SlackAttachmentColor = new System.Windows.Forms.Label();
             this.lbl_SlackAttachmentText = new System.Windows.Forms.Label();
             this.lbl_SlackAttachmentFallback = new System.Windows.Forms.Label();
-            this.lbl_SlackMessageFieldTip = new System.Windows.Forms.Label();
-            this.tbox_SlackAttachmentTitleLink = new System.Windows.Forms.TextBox();
-            this.lbl_SlackAttachmentTitleLink = new System.Windows.Forms.Label();
-            this.tbox_SlackAttachmentAuthorName = new System.Windows.Forms.TextBox();
-            this.lbl_SlackAttachmentAuthorName = new System.Windows.Forms.Label();
-            this.tbox_SlackAttachmentAuthorIcon = new System.Windows.Forms.TextBox();
-            this.lbl_SlackAttachmentAuthorIcon = new System.Windows.Forms.Label();
-            this.tbox_SlackAttachmentAuthorLink = new System.Windows.Forms.TextBox();
-            this.lbl_SlackAttachmentAuthorLink = new System.Windows.Forms.Label();
-            this.tbox_SlackAttachmentImageURL = new System.Windows.Forms.TextBox();
-            this.lbl_SlackAttachmentImageURL = new System.Windows.Forms.Label();
-            this.tbox_SlackAttachmentThumbURL = new System.Windows.Forms.TextBox();
-            this.lbl_SlackAttachmentThumbURL = new System.Windows.Forms.Label();
-            this.gbox_OptionalParams = new System.Windows.Forms.GroupBox();
+            this.lbl_SlackMessageIcon = new System.Windows.Forms.Label();
+            this.tbox_SlackMessageIcon = new System.Windows.Forms.TextBox();
             this.gbox_SlackField.SuspendLayout();
             this.gbox_SlackMessage.SuspendLayout();
             this.gbox_SlackAttachment.SuspendLayout();
@@ -78,7 +80,7 @@
             this.btn_SendSlackMessage.Location = new System.Drawing.Point(483, 370);
             this.btn_SendSlackMessage.Name = "btn_SendSlackMessage";
             this.btn_SendSlackMessage.Size = new System.Drawing.Size(87, 23);
-            this.btn_SendSlackMessage.TabIndex = 19;
+            this.btn_SendSlackMessage.TabIndex = 0;
             this.btn_SendSlackMessage.Text = "Send Message";
             this.btn_SendSlackMessage.UseVisualStyleBackColor = true;
             this.btn_SendSlackMessage.Click += new System.EventHandler(this.btn_SendSlackMessage_Click);
@@ -88,14 +90,14 @@
             this.tbox_SlackFieldTitle.Location = new System.Drawing.Point(46, 17);
             this.tbox_SlackFieldTitle.Name = "tbox_SlackFieldTitle";
             this.tbox_SlackFieldTitle.Size = new System.Drawing.Size(147, 20);
-            this.tbox_SlackFieldTitle.TabIndex = 14;
+            this.tbox_SlackFieldTitle.TabIndex = 0;
             // 
             // tbox_SlackFieldValue
             // 
             this.tbox_SlackFieldValue.Location = new System.Drawing.Point(46, 40);
             this.tbox_SlackFieldValue.Name = "tbox_SlackFieldValue";
             this.tbox_SlackFieldValue.Size = new System.Drawing.Size(147, 20);
-            this.tbox_SlackFieldValue.TabIndex = 15;
+            this.tbox_SlackFieldValue.TabIndex = 1;
             // 
             // cbox_SlackFieldShort
             // 
@@ -127,7 +129,7 @@
             this.btn_SlackFieldAdd.Location = new System.Drawing.Point(118, 66);
             this.btn_SlackFieldAdd.Name = "btn_SlackFieldAdd";
             this.btn_SlackFieldAdd.Size = new System.Drawing.Size(75, 23);
-            this.btn_SlackFieldAdd.TabIndex = 17;
+            this.btn_SlackFieldAdd.TabIndex = 2;
             this.btn_SlackFieldAdd.Text = "Add Field";
             this.btn_SlackFieldAdd.UseVisualStyleBackColor = true;
             this.btn_SlackFieldAdd.Click += new System.EventHandler(this.btn_SlackFieldAdd_Click);
@@ -152,6 +154,8 @@
             // 
             // gbox_SlackMessage
             // 
+            this.gbox_SlackMessage.Controls.Add(this.tbox_SlackMessageIcon);
+            this.gbox_SlackMessage.Controls.Add(this.lbl_SlackMessageIcon);
             this.gbox_SlackMessage.Controls.Add(this.lbl_SlackMessageValue);
             this.gbox_SlackMessage.Controls.Add(this.tbox_SlackMessageValue);
             this.gbox_SlackMessage.Controls.Add(this.tbox_SlackMessageUsername);
@@ -159,7 +163,7 @@
             this.gbox_SlackMessage.Location = new System.Drawing.Point(12, 12);
             this.gbox_SlackMessage.Name = "gbox_SlackMessage";
             this.gbox_SlackMessage.Size = new System.Drawing.Size(562, 77);
-            this.gbox_SlackMessage.TabIndex = 6;
+            this.gbox_SlackMessage.TabIndex = 0;
             this.gbox_SlackMessage.TabStop = false;
             this.gbox_SlackMessage.Text = "Slack Message";
             // 
@@ -177,14 +181,14 @@
             this.tbox_SlackMessageValue.Location = new System.Drawing.Point(66, 43);
             this.tbox_SlackMessageValue.Name = "tbox_SlackMessageValue";
             this.tbox_SlackMessageValue.Size = new System.Drawing.Size(487, 20);
-            this.tbox_SlackMessageValue.TabIndex = 2;
+            this.tbox_SlackMessageValue.TabIndex = 1;
             // 
             // tbox_SlackMessageUsername
             // 
             this.tbox_SlackMessageUsername.Location = new System.Drawing.Point(66, 17);
             this.tbox_SlackMessageUsername.Name = "tbox_SlackMessageUsername";
             this.tbox_SlackMessageUsername.Size = new System.Drawing.Size(124, 20);
-            this.tbox_SlackMessageUsername.TabIndex = 1;
+            this.tbox_SlackMessageUsername.TabIndex = 0;
             // 
             // lbl_SlackMessageUsername
             // 
@@ -212,16 +216,161 @@
             this.gbox_SlackAttachment.Location = new System.Drawing.Point(12, 95);
             this.gbox_SlackAttachment.Name = "gbox_SlackAttachment";
             this.gbox_SlackAttachment.Size = new System.Drawing.Size(562, 269);
-            this.gbox_SlackAttachment.TabIndex = 7;
+            this.gbox_SlackAttachment.TabIndex = 1;
             this.gbox_SlackAttachment.TabStop = false;
             this.gbox_SlackAttachment.Text = "Slack Attachment";
+            // 
+            // gbox_OptionalParams
+            // 
+            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentPreText);
+            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentThumbURL);
+            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentPretext);
+            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentThumbURL);
+            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentTitleLink);
+            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentImageURL);
+            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentTitleLink);
+            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentImageURL);
+            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentAuthorName);
+            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentAuthorLink);
+            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentAuthorName);
+            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentAuthorLink);
+            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentAuthorIcon);
+            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentAuthorIcon);
+            this.gbox_OptionalParams.Location = new System.Drawing.Point(12, 76);
+            this.gbox_OptionalParams.Name = "gbox_OptionalParams";
+            this.gbox_OptionalParams.Size = new System.Drawing.Size(224, 186);
+            this.gbox_OptionalParams.TabIndex = 4;
+            this.gbox_OptionalParams.TabStop = false;
+            this.gbox_OptionalParams.Text = "Optional Parameters";
+            // 
+            // lbl_SlackAttachmentPreText
+            // 
+            this.lbl_SlackAttachmentPreText.AutoSize = true;
+            this.lbl_SlackAttachmentPreText.Location = new System.Drawing.Point(44, 17);
+            this.lbl_SlackAttachmentPreText.Name = "lbl_SlackAttachmentPreText";
+            this.lbl_SlackAttachmentPreText.Size = new System.Drawing.Size(40, 13);
+            this.lbl_SlackAttachmentPreText.TabIndex = 3;
+            this.lbl_SlackAttachmentPreText.Text = "Pretext";
+            // 
+            // tbox_SlackAttachmentThumbURL
+            // 
+            this.tbox_SlackAttachmentThumbURL.Location = new System.Drawing.Point(91, 164);
+            this.tbox_SlackAttachmentThumbURL.Name = "tbox_SlackAttachmentThumbURL";
+            this.tbox_SlackAttachmentThumbURL.Size = new System.Drawing.Size(100, 20);
+            this.tbox_SlackAttachmentThumbURL.TabIndex = 6;
+            // 
+            // tbox_SlackAttachmentPretext
+            // 
+            this.tbox_SlackAttachmentPretext.Location = new System.Drawing.Point(92, 14);
+            this.tbox_SlackAttachmentPretext.Name = "tbox_SlackAttachmentPretext";
+            this.tbox_SlackAttachmentPretext.Size = new System.Drawing.Size(100, 20);
+            this.tbox_SlackAttachmentPretext.TabIndex = 0;
+            // 
+            // lbl_SlackAttachmentThumbURL
+            // 
+            this.lbl_SlackAttachmentThumbURL.AutoSize = true;
+            this.lbl_SlackAttachmentThumbURL.Location = new System.Drawing.Point(4, 167);
+            this.lbl_SlackAttachmentThumbURL.Name = "lbl_SlackAttachmentThumbURL";
+            this.lbl_SlackAttachmentThumbURL.Size = new System.Drawing.Size(81, 13);
+            this.lbl_SlackAttachmentThumbURL.TabIndex = 23;
+            this.lbl_SlackAttachmentThumbURL.Text = "Thumbnail URL";
+            // 
+            // lbl_SlackAttachmentTitleLink
+            // 
+            this.lbl_SlackAttachmentTitleLink.AutoSize = true;
+            this.lbl_SlackAttachmentTitleLink.Location = new System.Drawing.Point(35, 41);
+            this.lbl_SlackAttachmentTitleLink.Name = "lbl_SlackAttachmentTitleLink";
+            this.lbl_SlackAttachmentTitleLink.Size = new System.Drawing.Size(50, 13);
+            this.lbl_SlackAttachmentTitleLink.TabIndex = 13;
+            this.lbl_SlackAttachmentTitleLink.Text = "Title Link";
+            // 
+            // tbox_SlackAttachmentImageURL
+            // 
+            this.tbox_SlackAttachmentImageURL.Location = new System.Drawing.Point(91, 138);
+            this.tbox_SlackAttachmentImageURL.Name = "tbox_SlackAttachmentImageURL";
+            this.tbox_SlackAttachmentImageURL.Size = new System.Drawing.Size(100, 20);
+            this.tbox_SlackAttachmentImageURL.TabIndex = 5;
+            // 
+            // tbox_SlackAttachmentTitleLink
+            // 
+            this.tbox_SlackAttachmentTitleLink.Location = new System.Drawing.Point(92, 38);
+            this.tbox_SlackAttachmentTitleLink.Name = "tbox_SlackAttachmentTitleLink";
+            this.tbox_SlackAttachmentTitleLink.Size = new System.Drawing.Size(100, 20);
+            this.tbox_SlackAttachmentTitleLink.TabIndex = 1;
+            // 
+            // lbl_SlackAttachmentImageURL
+            // 
+            this.lbl_SlackAttachmentImageURL.AutoSize = true;
+            this.lbl_SlackAttachmentImageURL.Location = new System.Drawing.Point(24, 141);
+            this.lbl_SlackAttachmentImageURL.Name = "lbl_SlackAttachmentImageURL";
+            this.lbl_SlackAttachmentImageURL.Size = new System.Drawing.Size(61, 13);
+            this.lbl_SlackAttachmentImageURL.TabIndex = 21;
+            this.lbl_SlackAttachmentImageURL.Text = "Image URL";
+            // 
+            // lbl_SlackAttachmentAuthorName
+            // 
+            this.lbl_SlackAttachmentAuthorName.AutoSize = true;
+            this.lbl_SlackAttachmentAuthorName.Location = new System.Drawing.Point(17, 67);
+            this.lbl_SlackAttachmentAuthorName.Name = "lbl_SlackAttachmentAuthorName";
+            this.lbl_SlackAttachmentAuthorName.Size = new System.Drawing.Size(69, 13);
+            this.lbl_SlackAttachmentAuthorName.TabIndex = 15;
+            this.lbl_SlackAttachmentAuthorName.Text = "Author Name";
+            // 
+            // tbox_SlackAttachmentAuthorLink
+            // 
+            this.tbox_SlackAttachmentAuthorLink.Location = new System.Drawing.Point(92, 114);
+            this.tbox_SlackAttachmentAuthorLink.Name = "tbox_SlackAttachmentAuthorLink";
+            this.tbox_SlackAttachmentAuthorLink.Size = new System.Drawing.Size(100, 20);
+            this.tbox_SlackAttachmentAuthorLink.TabIndex = 4;
+            // 
+            // tbox_SlackAttachmentAuthorName
+            // 
+            this.tbox_SlackAttachmentAuthorName.Location = new System.Drawing.Point(92, 64);
+            this.tbox_SlackAttachmentAuthorName.Name = "tbox_SlackAttachmentAuthorName";
+            this.tbox_SlackAttachmentAuthorName.Size = new System.Drawing.Size(100, 20);
+            this.tbox_SlackAttachmentAuthorName.TabIndex = 2;
+            // 
+            // lbl_SlackAttachmentAuthorLink
+            // 
+            this.lbl_SlackAttachmentAuthorLink.AutoSize = true;
+            this.lbl_SlackAttachmentAuthorLink.Location = new System.Drawing.Point(24, 117);
+            this.lbl_SlackAttachmentAuthorLink.Name = "lbl_SlackAttachmentAuthorLink";
+            this.lbl_SlackAttachmentAuthorLink.Size = new System.Drawing.Size(61, 13);
+            this.lbl_SlackAttachmentAuthorLink.TabIndex = 19;
+            this.lbl_SlackAttachmentAuthorLink.Text = "Author Link";
+            // 
+            // lbl_SlackAttachmentAuthorIcon
+            // 
+            this.lbl_SlackAttachmentAuthorIcon.AutoSize = true;
+            this.lbl_SlackAttachmentAuthorIcon.Location = new System.Drawing.Point(24, 91);
+            this.lbl_SlackAttachmentAuthorIcon.Name = "lbl_SlackAttachmentAuthorIcon";
+            this.lbl_SlackAttachmentAuthorIcon.Size = new System.Drawing.Size(62, 13);
+            this.lbl_SlackAttachmentAuthorIcon.TabIndex = 17;
+            this.lbl_SlackAttachmentAuthorIcon.Text = "Author Icon";
+            // 
+            // tbox_SlackAttachmentAuthorIcon
+            // 
+            this.tbox_SlackAttachmentAuthorIcon.Location = new System.Drawing.Point(92, 88);
+            this.tbox_SlackAttachmentAuthorIcon.Name = "tbox_SlackAttachmentAuthorIcon";
+            this.tbox_SlackAttachmentAuthorIcon.Size = new System.Drawing.Size(100, 20);
+            this.tbox_SlackAttachmentAuthorIcon.TabIndex = 3;
+            // 
+            // lbl_SlackMessageFieldTip
+            // 
+            this.lbl_SlackMessageFieldTip.ForeColor = System.Drawing.Color.Red;
+            this.lbl_SlackMessageFieldTip.Location = new System.Drawing.Point(348, 108);
+            this.lbl_SlackMessageFieldTip.Name = "lbl_SlackMessageFieldTip";
+            this.lbl_SlackMessageFieldTip.Size = new System.Drawing.Size(205, 45);
+            this.lbl_SlackMessageFieldTip.TabIndex = 11;
+            this.lbl_SlackMessageFieldTip.Text = "You have to add a field before adding the attachment for fields to add correctly." +
+    "";
             // 
             // tbox_SlackAttachmentTitle
             // 
             this.tbox_SlackAttachmentTitle.Location = new System.Drawing.Point(49, 19);
             this.tbox_SlackAttachmentTitle.Name = "tbox_SlackAttachmentTitle";
             this.tbox_SlackAttachmentTitle.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentTitle.TabIndex = 3;
+            this.tbox_SlackAttachmentTitle.TabIndex = 0;
             // 
             // lbl_SlackAttachmentTitle
             // 
@@ -237,7 +386,7 @@
             this.btn_SlackAttachmentAdd.Location = new System.Drawing.Point(448, 240);
             this.btn_SlackAttachmentAdd.Name = "btn_SlackAttachmentAdd";
             this.btn_SlackAttachmentAdd.Size = new System.Drawing.Size(108, 23);
-            this.btn_SlackAttachmentAdd.TabIndex = 18;
+            this.btn_SlackAttachmentAdd.TabIndex = 4;
             this.btn_SlackAttachmentAdd.Text = "Add Attachment";
             this.btn_SlackAttachmentAdd.UseVisualStyleBackColor = true;
             this.btn_SlackAttachmentAdd.Click += new System.EventHandler(this.btn_SlackAttachmentAdd_Click);
@@ -247,37 +396,21 @@
             this.tbox_SlackAttachmentFallback.Location = new System.Drawing.Point(242, 41);
             this.tbox_SlackAttachmentFallback.Name = "tbox_SlackAttachmentFallback";
             this.tbox_SlackAttachmentFallback.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentFallback.TabIndex = 6;
-            // 
-            // tbox_SlackAttachmentPretext
-            // 
-            this.tbox_SlackAttachmentPretext.Location = new System.Drawing.Point(92, 14);
-            this.tbox_SlackAttachmentPretext.Name = "tbox_SlackAttachmentPretext";
-            this.tbox_SlackAttachmentPretext.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentPretext.TabIndex = 7;
+            this.tbox_SlackAttachmentFallback.TabIndex = 3;
             // 
             // tbox_SlackAttachmentColor
             // 
             this.tbox_SlackAttachmentColor.Location = new System.Drawing.Point(242, 19);
             this.tbox_SlackAttachmentColor.Name = "tbox_SlackAttachmentColor";
             this.tbox_SlackAttachmentColor.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentColor.TabIndex = 5;
+            this.tbox_SlackAttachmentColor.TabIndex = 2;
             // 
             // tbox_SlackAttachmentText
             // 
             this.tbox_SlackAttachmentText.Location = new System.Drawing.Point(49, 41);
             this.tbox_SlackAttachmentText.Name = "tbox_SlackAttachmentText";
             this.tbox_SlackAttachmentText.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentText.TabIndex = 4;
-            // 
-            // lbl_SlackAttachmentPreText
-            // 
-            this.lbl_SlackAttachmentPreText.AutoSize = true;
-            this.lbl_SlackAttachmentPreText.Location = new System.Drawing.Point(44, 17);
-            this.lbl_SlackAttachmentPreText.Name = "lbl_SlackAttachmentPreText";
-            this.lbl_SlackAttachmentPreText.Size = new System.Drawing.Size(40, 13);
-            this.lbl_SlackAttachmentPreText.TabIndex = 3;
-            this.lbl_SlackAttachmentPreText.Text = "Pretext";
+            this.tbox_SlackAttachmentText.TabIndex = 1;
             // 
             // lbl_SlackAttachmentColor
             // 
@@ -306,134 +439,21 @@
             this.lbl_SlackAttachmentFallback.TabIndex = 0;
             this.lbl_SlackAttachmentFallback.Text = "Fallback";
             // 
-            // lbl_SlackMessageFieldTip
+            // lbl_SlackMessageIcon
             // 
-            this.lbl_SlackMessageFieldTip.ForeColor = System.Drawing.Color.Red;
-            this.lbl_SlackMessageFieldTip.Location = new System.Drawing.Point(348, 108);
-            this.lbl_SlackMessageFieldTip.Name = "lbl_SlackMessageFieldTip";
-            this.lbl_SlackMessageFieldTip.Size = new System.Drawing.Size(205, 45);
-            this.lbl_SlackMessageFieldTip.TabIndex = 11;
-            this.lbl_SlackMessageFieldTip.Text = "You have to add a field before adding the attachment for fields to add correctly." +
-    "";
+            this.lbl_SlackMessageIcon.AutoSize = true;
+            this.lbl_SlackMessageIcon.Location = new System.Drawing.Point(197, 20);
+            this.lbl_SlackMessageIcon.Name = "lbl_SlackMessageIcon";
+            this.lbl_SlackMessageIcon.Size = new System.Drawing.Size(53, 13);
+            this.lbl_SlackMessageIcon.TabIndex = 4;
+            this.lbl_SlackMessageIcon.Text = "Icon URL";
             // 
-            // tbox_SlackAttachmentTitleLink
+            // tbox_SlackMessageIcon
             // 
-            this.tbox_SlackAttachmentTitleLink.Location = new System.Drawing.Point(92, 38);
-            this.tbox_SlackAttachmentTitleLink.Name = "tbox_SlackAttachmentTitleLink";
-            this.tbox_SlackAttachmentTitleLink.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentTitleLink.TabIndex = 8;
-            // 
-            // lbl_SlackAttachmentTitleLink
-            // 
-            this.lbl_SlackAttachmentTitleLink.AutoSize = true;
-            this.lbl_SlackAttachmentTitleLink.Location = new System.Drawing.Point(35, 41);
-            this.lbl_SlackAttachmentTitleLink.Name = "lbl_SlackAttachmentTitleLink";
-            this.lbl_SlackAttachmentTitleLink.Size = new System.Drawing.Size(50, 13);
-            this.lbl_SlackAttachmentTitleLink.TabIndex = 13;
-            this.lbl_SlackAttachmentTitleLink.Text = "Title Link";
-            // 
-            // tbox_SlackAttachmentAuthorName
-            // 
-            this.tbox_SlackAttachmentAuthorName.Location = new System.Drawing.Point(92, 64);
-            this.tbox_SlackAttachmentAuthorName.Name = "tbox_SlackAttachmentAuthorName";
-            this.tbox_SlackAttachmentAuthorName.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentAuthorName.TabIndex = 9;
-            // 
-            // lbl_SlackAttachmentAuthorName
-            // 
-            this.lbl_SlackAttachmentAuthorName.AutoSize = true;
-            this.lbl_SlackAttachmentAuthorName.Location = new System.Drawing.Point(17, 67);
-            this.lbl_SlackAttachmentAuthorName.Name = "lbl_SlackAttachmentAuthorName";
-            this.lbl_SlackAttachmentAuthorName.Size = new System.Drawing.Size(69, 13);
-            this.lbl_SlackAttachmentAuthorName.TabIndex = 15;
-            this.lbl_SlackAttachmentAuthorName.Text = "Author Name";
-            // 
-            // tbox_SlackAttachmentAuthorIcon
-            // 
-            this.tbox_SlackAttachmentAuthorIcon.Location = new System.Drawing.Point(92, 88);
-            this.tbox_SlackAttachmentAuthorIcon.Name = "tbox_SlackAttachmentAuthorIcon";
-            this.tbox_SlackAttachmentAuthorIcon.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentAuthorIcon.TabIndex = 10;
-            // 
-            // lbl_SlackAttachmentAuthorIcon
-            // 
-            this.lbl_SlackAttachmentAuthorIcon.AutoSize = true;
-            this.lbl_SlackAttachmentAuthorIcon.Location = new System.Drawing.Point(24, 91);
-            this.lbl_SlackAttachmentAuthorIcon.Name = "lbl_SlackAttachmentAuthorIcon";
-            this.lbl_SlackAttachmentAuthorIcon.Size = new System.Drawing.Size(62, 13);
-            this.lbl_SlackAttachmentAuthorIcon.TabIndex = 17;
-            this.lbl_SlackAttachmentAuthorIcon.Text = "Author Icon";
-            // 
-            // tbox_SlackAttachmentAuthorLink
-            // 
-            this.tbox_SlackAttachmentAuthorLink.Location = new System.Drawing.Point(92, 114);
-            this.tbox_SlackAttachmentAuthorLink.Name = "tbox_SlackAttachmentAuthorLink";
-            this.tbox_SlackAttachmentAuthorLink.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentAuthorLink.TabIndex = 11;
-            // 
-            // lbl_SlackAttachmentAuthorLink
-            // 
-            this.lbl_SlackAttachmentAuthorLink.AutoSize = true;
-            this.lbl_SlackAttachmentAuthorLink.Location = new System.Drawing.Point(24, 117);
-            this.lbl_SlackAttachmentAuthorLink.Name = "lbl_SlackAttachmentAuthorLink";
-            this.lbl_SlackAttachmentAuthorLink.Size = new System.Drawing.Size(61, 13);
-            this.lbl_SlackAttachmentAuthorLink.TabIndex = 19;
-            this.lbl_SlackAttachmentAuthorLink.Text = "Author Link";
-            // 
-            // tbox_SlackAttachmentImageURL
-            // 
-            this.tbox_SlackAttachmentImageURL.Location = new System.Drawing.Point(91, 138);
-            this.tbox_SlackAttachmentImageURL.Name = "tbox_SlackAttachmentImageURL";
-            this.tbox_SlackAttachmentImageURL.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentImageURL.TabIndex = 12;
-            // 
-            // lbl_SlackAttachmentImageURL
-            // 
-            this.lbl_SlackAttachmentImageURL.AutoSize = true;
-            this.lbl_SlackAttachmentImageURL.Location = new System.Drawing.Point(24, 141);
-            this.lbl_SlackAttachmentImageURL.Name = "lbl_SlackAttachmentImageURL";
-            this.lbl_SlackAttachmentImageURL.Size = new System.Drawing.Size(61, 13);
-            this.lbl_SlackAttachmentImageURL.TabIndex = 21;
-            this.lbl_SlackAttachmentImageURL.Text = "Image URL";
-            // 
-            // tbox_SlackAttachmentThumbURL
-            // 
-            this.tbox_SlackAttachmentThumbURL.Location = new System.Drawing.Point(91, 164);
-            this.tbox_SlackAttachmentThumbURL.Name = "tbox_SlackAttachmentThumbURL";
-            this.tbox_SlackAttachmentThumbURL.Size = new System.Drawing.Size(100, 20);
-            this.tbox_SlackAttachmentThumbURL.TabIndex = 13;
-            // 
-            // lbl_SlackAttachmentThumbURL
-            // 
-            this.lbl_SlackAttachmentThumbURL.AutoSize = true;
-            this.lbl_SlackAttachmentThumbURL.Location = new System.Drawing.Point(4, 167);
-            this.lbl_SlackAttachmentThumbURL.Name = "lbl_SlackAttachmentThumbURL";
-            this.lbl_SlackAttachmentThumbURL.Size = new System.Drawing.Size(81, 13);
-            this.lbl_SlackAttachmentThumbURL.TabIndex = 23;
-            this.lbl_SlackAttachmentThumbURL.Text = "Thumbnail URL";
-            // 
-            // gbox_OptionalParams
-            // 
-            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentPreText);
-            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentThumbURL);
-            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentPretext);
-            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentThumbURL);
-            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentTitleLink);
-            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentImageURL);
-            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentTitleLink);
-            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentImageURL);
-            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentAuthorName);
-            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentAuthorLink);
-            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentAuthorName);
-            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentAuthorLink);
-            this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentAuthorIcon);
-            this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentAuthorIcon);
-            this.gbox_OptionalParams.Location = new System.Drawing.Point(12, 76);
-            this.gbox_OptionalParams.Name = "gbox_OptionalParams";
-            this.gbox_OptionalParams.Size = new System.Drawing.Size(224, 186);
-            this.gbox_OptionalParams.TabIndex = 25;
-            this.gbox_OptionalParams.TabStop = false;
-            this.gbox_OptionalParams.Text = "Optional Parameters";
+            this.tbox_SlackMessageIcon.Location = new System.Drawing.Point(256, 17);
+            this.tbox_SlackMessageIcon.Name = "tbox_SlackMessageIcon";
+            this.tbox_SlackMessageIcon.Size = new System.Drawing.Size(297, 20);
+            this.tbox_SlackMessageIcon.TabIndex = 5;
             // 
             // MainForm
             // 
@@ -498,6 +518,8 @@
         private System.Windows.Forms.Label lbl_SlackAttachmentAuthorLink;
         private System.Windows.Forms.Label lbl_SlackAttachmentAuthorIcon;
         private System.Windows.Forms.TextBox tbox_SlackAttachmentAuthorIcon;
+        private System.Windows.Forms.TextBox tbox_SlackMessageIcon;
+        private System.Windows.Forms.Label lbl_SlackMessageIcon;
     }
 }
 
