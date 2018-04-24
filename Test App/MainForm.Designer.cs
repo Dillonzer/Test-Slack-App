@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btn_SendSlackMessage = new System.Windows.Forms.Button();
             this.tbox_SlackFieldTitle = new System.Windows.Forms.TextBox();
             this.tbox_SlackFieldValue = new System.Windows.Forms.TextBox();
@@ -37,6 +38,8 @@
             this.lbl_SlackFieldValue = new System.Windows.Forms.Label();
             this.lbl_SlackFieldTitle = new System.Windows.Forms.Label();
             this.gbox_SlackMessage = new System.Windows.Forms.GroupBox();
+            this.tbox_SlackMessageIcon = new System.Windows.Forms.TextBox();
+            this.lbl_SlackMessageIcon = new System.Windows.Forms.Label();
             this.lbl_SlackMessageValue = new System.Windows.Forms.Label();
             this.tbox_SlackMessageValue = new System.Windows.Forms.TextBox();
             this.tbox_SlackMessageUsername = new System.Windows.Forms.TextBox();
@@ -67,8 +70,6 @@
             this.lbl_SlackAttachmentColor = new System.Windows.Forms.Label();
             this.lbl_SlackAttachmentText = new System.Windows.Forms.Label();
             this.lbl_SlackAttachmentFallback = new System.Windows.Forms.Label();
-            this.lbl_SlackMessageIcon = new System.Windows.Forms.Label();
-            this.tbox_SlackMessageIcon = new System.Windows.Forms.TextBox();
             this.gbox_SlackField.SuspendLayout();
             this.gbox_SlackMessage.SuspendLayout();
             this.gbox_SlackAttachment.SuspendLayout();
@@ -166,6 +167,22 @@
             this.gbox_SlackMessage.TabIndex = 0;
             this.gbox_SlackMessage.TabStop = false;
             this.gbox_SlackMessage.Text = "Slack Message";
+            // 
+            // tbox_SlackMessageIcon
+            // 
+            this.tbox_SlackMessageIcon.Location = new System.Drawing.Point(256, 17);
+            this.tbox_SlackMessageIcon.Name = "tbox_SlackMessageIcon";
+            this.tbox_SlackMessageIcon.Size = new System.Drawing.Size(297, 20);
+            this.tbox_SlackMessageIcon.TabIndex = 5;
+            // 
+            // lbl_SlackMessageIcon
+            // 
+            this.lbl_SlackMessageIcon.AutoSize = true;
+            this.lbl_SlackMessageIcon.Location = new System.Drawing.Point(197, 20);
+            this.lbl_SlackMessageIcon.Name = "lbl_SlackMessageIcon";
+            this.lbl_SlackMessageIcon.Size = new System.Drawing.Size(53, 13);
+            this.lbl_SlackMessageIcon.TabIndex = 4;
+            this.lbl_SlackMessageIcon.Text = "Icon URL";
             // 
             // lbl_SlackMessageValue
             // 
@@ -439,22 +456,6 @@
             this.lbl_SlackAttachmentFallback.TabIndex = 0;
             this.lbl_SlackAttachmentFallback.Text = "Fallback";
             // 
-            // lbl_SlackMessageIcon
-            // 
-            this.lbl_SlackMessageIcon.AutoSize = true;
-            this.lbl_SlackMessageIcon.Location = new System.Drawing.Point(197, 20);
-            this.lbl_SlackMessageIcon.Name = "lbl_SlackMessageIcon";
-            this.lbl_SlackMessageIcon.Size = new System.Drawing.Size(53, 13);
-            this.lbl_SlackMessageIcon.TabIndex = 4;
-            this.lbl_SlackMessageIcon.Text = "Icon URL";
-            // 
-            // tbox_SlackMessageIcon
-            // 
-            this.tbox_SlackMessageIcon.Location = new System.Drawing.Point(256, 17);
-            this.tbox_SlackMessageIcon.Name = "tbox_SlackMessageIcon";
-            this.tbox_SlackMessageIcon.Size = new System.Drawing.Size(297, 20);
-            this.tbox_SlackMessageIcon.TabIndex = 5;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,6 +464,7 @@
             this.Controls.Add(this.gbox_SlackAttachment);
             this.Controls.Add(this.gbox_SlackMessage);
             this.Controls.Add(this.btn_SendSlackMessage);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Slack Sender";
             this.gbox_SlackField.ResumeLayout(false);

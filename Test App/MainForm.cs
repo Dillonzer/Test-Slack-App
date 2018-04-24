@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Test_App
 {
     public partial class MainForm : Form
     {
-        const string WEBHOOK = "https://hooks.slack.com/services/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";
+        string webhook = ConfigurationManager.AppSettings["webhook"];
         Slack client = new Slack();
         List<SlackAttachment> slackAttachments = new List<SlackAttachment> { null };
         List<SlackField> slackFields = new List<SlackField> { null };
@@ -32,11 +33,11 @@ namespace Test_App
             if (icontext != "")
             {
                 Uri icon = new Uri(icontext);
-                client.SendSlackMessage(WEBHOOK, username, message, icon, slackAttachments);
+                client.SendSlackMessage(webhook, username, message, icon, slackAttachments);
             }
             else
             {
-                client.SendSlackMessage(WEBHOOK, username, message, null, slackAttachments);
+                client.SendSlackMessage(webhook, username, message, null, slackAttachments);
             }
 
             //clear these so the next message is fresh
