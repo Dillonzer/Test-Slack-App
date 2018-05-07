@@ -70,6 +70,10 @@
             this.lbl_SlackAttachmentColor = new System.Windows.Forms.Label();
             this.lbl_SlackAttachmentText = new System.Windows.Forms.Label();
             this.lbl_SlackAttachmentFallback = new System.Windows.Forms.Label();
+            this.label_Footer = new System.Windows.Forms.Label();
+            this.textbox_Footer = new System.Windows.Forms.TextBox();
+            this.label_FooterURL = new System.Windows.Forms.Label();
+            this.textbox_FooterURL = new System.Windows.Forms.TextBox();
             this.gbox_SlackField.SuspendLayout();
             this.gbox_SlackMessage.SuspendLayout();
             this.gbox_SlackAttachment.SuspendLayout();
@@ -239,6 +243,10 @@
             // 
             // gbox_OptionalParams
             // 
+            this.gbox_OptionalParams.Controls.Add(this.label_FooterURL);
+            this.gbox_OptionalParams.Controls.Add(this.textbox_FooterURL);
+            this.gbox_OptionalParams.Controls.Add(this.label_Footer);
+            this.gbox_OptionalParams.Controls.Add(this.textbox_Footer);
             this.gbox_OptionalParams.Controls.Add(this.lbl_SlackAttachmentPreText);
             this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentThumbURL);
             this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentPretext);
@@ -255,7 +263,7 @@
             this.gbox_OptionalParams.Controls.Add(this.tbox_SlackAttachmentAuthorIcon);
             this.gbox_OptionalParams.Location = new System.Drawing.Point(12, 76);
             this.gbox_OptionalParams.Name = "gbox_OptionalParams";
-            this.gbox_OptionalParams.Size = new System.Drawing.Size(224, 186);
+            this.gbox_OptionalParams.Size = new System.Drawing.Size(330, 186);
             this.gbox_OptionalParams.TabIndex = 4;
             this.gbox_OptionalParams.TabStop = false;
             this.gbox_OptionalParams.Text = "Optional Parameters";
@@ -456,6 +464,38 @@
             this.lbl_SlackAttachmentFallback.TabIndex = 0;
             this.lbl_SlackAttachmentFallback.Text = "Fallback";
             // 
+            // label_Footer
+            // 
+            this.label_Footer.AutoSize = true;
+            this.label_Footer.Location = new System.Drawing.Point(196, 17);
+            this.label_Footer.Name = "label_Footer";
+            this.label_Footer.Size = new System.Drawing.Size(37, 13);
+            this.label_Footer.TabIndex = 25;
+            this.label_Footer.Text = "Footer";
+            // 
+            // textbox_Footer
+            // 
+            this.textbox_Footer.Location = new System.Drawing.Point(244, 14);
+            this.textbox_Footer.Name = "textbox_Footer";
+            this.textbox_Footer.Size = new System.Drawing.Size(80, 20);
+            this.textbox_Footer.TabIndex = 24;
+            // 
+            // label_FooterURL
+            // 
+            this.label_FooterURL.AutoSize = true;
+            this.label_FooterURL.Location = new System.Drawing.Point(196, 41);
+            this.label_FooterURL.Name = "label_FooterURL";
+            this.label_FooterURL.Size = new System.Drawing.Size(62, 13);
+            this.label_FooterURL.TabIndex = 27;
+            this.label_FooterURL.Text = "Footer URL";
+            // 
+            // textbox_FooterURL
+            // 
+            this.textbox_FooterURL.Location = new System.Drawing.Point(264, 38);
+            this.textbox_FooterURL.Name = "textbox_FooterURL";
+            this.textbox_FooterURL.Size = new System.Drawing.Size(60, 20);
+            this.textbox_FooterURL.TabIndex = 26;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,6 +562,10 @@
         private System.Windows.Forms.TextBox tbox_SlackAttachmentAuthorIcon;
         private System.Windows.Forms.TextBox tbox_SlackMessageIcon;
         private System.Windows.Forms.Label lbl_SlackMessageIcon;
+        private System.Windows.Forms.Label label_Footer;
+        private System.Windows.Forms.TextBox textbox_Footer;
+        private System.Windows.Forms.Label label_FooterURL;
+        private System.Windows.Forms.TextBox textbox_FooterURL;
     }
 }
 

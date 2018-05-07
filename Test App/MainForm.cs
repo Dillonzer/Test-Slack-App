@@ -63,8 +63,10 @@ namespace Test_App
             string authorLink = tbox_SlackAttachmentAuthorLink.Text; //must start with https://
             string imageURL = tbox_SlackAttachmentImageURL.Text;
             string thumbURL = tbox_SlackAttachmentThumbURL.Text;
+            string footer = textbox_Footer.Text;
+            string footerURL = textbox_FooterURL.Text;
 
-            attachment = client.CreateSlackAttachment(fallback, value, color, title, slackFields, pretext, titleLink, authorName, authorIcon, authorLink, imageURL, thumbURL);
+            attachment = client.CreateSlackAttachment(fallback, value, color, title, slackFields, pretext, titleLink, authorName, authorIcon, authorLink, imageURL, thumbURL, footer, footerURL);
 
             slackAttachments.Add(attachment);
             slackFields.Clear(); //clear the fields for the next attachment

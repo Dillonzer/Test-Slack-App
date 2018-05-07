@@ -67,8 +67,10 @@ namespace Test_App
         /// <param name="pretext">Optional text to show before the main text</param>
         /// <param name="image_url">Optional image URL</param>
         /// <param name="thumb_url">Optional thumb URL</param>
+        /// <param name="footer">Optional footer</param>
+        /// <param name="footer_url">Optional footer url</param>
         /// <returns>A finished Slack Attachment to attach to a message</returns>
-        public SlackAttachment CreateSlackAttachment(string fallback, string text, string color, string title, List<SlackField> fields = null, string pretext = null, string title_link = null, string author_name = null, string author_icon = null, string author_link = null, string image_url = null, string thumb_url = null)
+        public SlackAttachment CreateSlackAttachment(string fallback, string text, string color, string title, List<SlackField> fields = null, string pretext = null, string title_link = null, string author_name = null, string author_icon = null, string author_link = null, string image_url = null, string thumb_url = null, string footer = null, string footer_url = null)
         {
             SlackAttachment slackAttachment = new SlackAttachment { };
 
@@ -87,7 +89,9 @@ namespace Test_App
                     TitleLink = title_link,
                     Fields = new List<SlackField> { },
                     ImageUrl = image_url,
-                    ThumbUrl = thumb_url
+                    ThumbUrl = thumb_url,
+                    Footer = footer,
+                    FooterIcon = footer_url
                 };
 
                 slackAttachment.Fields.AddRange(fields);
@@ -107,7 +111,9 @@ namespace Test_App
                     Title = title,
                     TitleLink = title_link,
                     ImageUrl = image_url,
-                    ThumbUrl = thumb_url
+                    ThumbUrl = thumb_url,
+                    Footer = footer,
+                    FooterIcon = footer_url
                 };
             }
 
